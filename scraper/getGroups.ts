@@ -14,7 +14,7 @@ interface Player {
 }
 
 const createDraw = (allPlayers: Player[], groupSize: number): Player[][] => {
-  let totalGroups = allPlayers.length / groupSize;
+  let totalGroups = Math.floor(allPlayers.length / groupSize);
   if (allPlayers.length % groupSize !== 0) {
     totalGroups += 1;
   }
